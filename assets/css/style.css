@@ -1,0 +1,108 @@
+/* Body style */
+body {
+    background-color: black;
+}
+
+/* Header styles */
+header h1, 
+header p, 
+footer h4,
+footer p {
+    text-align: center;
+}
+
+header h1 {
+    padding: 10px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: fuchsia;
+}
+
+header p,
+footer h4,
+footer p {
+    color: white
+}
+
+section {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(6, lfr) 
+}
+
+section p {
+    color: fuchsia;
+}
+
+.column h2 {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: fuchsia;
+    border: 1px solid white;
+    border-radius: 7px;
+    position: relative;
+    margin-top: -30px;
+    background-color: black;
+    transition: all 0.5s ease-in-out;
+}
+
+.column:hover,
+.column:hover h2 {
+    box-shadow: inset 0px 0px 7px
+    rgba(236, 89, 241, 1), 0 0 15px
+    rgba(236, 89, 241, 1);
+
+}
+
+section pre {
+        font-family: Consolas,"courier new";
+        color: white;
+        padding: 2px;
+        border-radius: 7px;
+        background-image: linear-gradient(
+            rgba(236, 89, 241, 0.3) 0%,
+            rgba(236, 89, 241, 0.6) 100%
+        ); 
+        user-select: all;
+}
+
+.row {
+    display: flex;
+    flex-direction: row:
+    flex-wrap: wrap;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    border: 2px dashed white;
+    padding: 20px;
+    margin: 20px;
+    width: 400px;
+    height: 400px;
+}
+
+
+@media screen and (min-width: 992px) {
+    main,
+    section {
+        /* should be something here for 3 columns across */
+      flex-direction: column;
+    }
+  }
+
+@media screen and (min-width: 768px) {
+    main,
+    section {
+        /* should be something here for 2 columns across */
+      flex-direction: column;
+    }
+  }
+
+
+@media screen and (max-width: 767px) {
+    main,
+    section {
+        /* should be something here for 1 column across */
+      flex-direction: column;
+    }
+}
+  
